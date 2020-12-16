@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
-    complete = db.Column(db.Boolean)
+    complete = db.Column(db.Boolean)    
 
 
 @app.route('/')
@@ -49,7 +49,7 @@ def delete(todo_id):
     todo = Todo.query.filter_by(id=todo_id).first()
     db.session.delete(todo)
     db.session.commit()
-    return redirect(url_for("index"))
+    return redirect(url_for("index"))   
 
 
 db.create_all()

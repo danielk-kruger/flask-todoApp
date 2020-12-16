@@ -18,7 +18,7 @@ $ . venv/bin/activate
 * Install Flask
 ``` Bash
 $ pip3 install flask
-$ pip3 install flask-sqlachemy
+$ pip3 install flask-sqlalchemy
 ```
 
 * Run the app
